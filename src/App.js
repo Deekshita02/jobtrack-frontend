@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Login from './Login';
 
-const API_URL = 'http://localhost:8080/api/applications';
+const API_URL = 'https://jobtrack-api-r4i9.onrender.com';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
