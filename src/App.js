@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Login from './Login';
 
-const API_URL = 'https://jobtrack-api-r4i9.onrender.com';
+const API_URL = 'https://jobtrack-api-r4i9.onrender.com/api/applications';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -17,11 +17,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (token) {
       fetchApplications();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   const authHeaders = () => ({
