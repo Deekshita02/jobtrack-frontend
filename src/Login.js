@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const API_URL = 'https://jobtrack-api-r4i9.onrender.com/api/applications';
+const API_URL = 'https://jobtrack-api-r4i9.onrender.com/api/auth';
 
 function Login({ onLoginSuccess }) {
     const [isRegistering, setIsRegistering] = useState(false);
